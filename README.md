@@ -19,7 +19,7 @@ or `/gemini-models` to show the list.
 
 ```powershell
 # 1. Clone this repo
-git clone https://github.com/<your-username>/gemini-claude-code-windows.git
+git clone https://github.com/xuyanging/gemini-claude-code-windows.git
 cd gemini-claude-code-windows
 
 # 2. Run setup (Right-click → "Run with PowerShell" also works)
