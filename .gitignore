@@ -1,0 +1,6 @@
+*.log
+.env
+.env.local
+node_modules/
+fork/
+__local__/

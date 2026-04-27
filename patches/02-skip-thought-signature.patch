@@ -1,0 +1,18 @@
+diff --git a/packages/core/src/utils/gemini.util.ts b/packages/core/src/utils/gemini.util.ts
+index fc73bf9..8bc5199 100644
+--- a/packages/core/src/utils/gemini.util.ts
++++ b/packages/core/src/utils/gemini.util.ts
+@@ -879,8 +879,11 @@ export async function transformResponseOut(
+                 let signature = parts.find(
+                   (part: Part) => part.thoughtSignature
+                 )?.thoughtSignature;
+-                if (signature && !signatureSent) {
+-                  // Send signature even without thinking content (Gemini 3 requires it for function calls)
++                // Skip emitting signature as a thinking block — it arrives mixed
++                // with function calls and breaks Anthropic content-block ordering
++                // ("Content block is not a thinking block"). Claude doesn't verify
++                // Gemini's signatures, so dropping is safe for our use case.
++                if (false && signature && !signatureSent) {
+                   const signatureChunk = {
+                     choices: [
+                       {

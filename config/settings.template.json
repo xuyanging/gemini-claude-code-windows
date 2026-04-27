@@ -1,0 +1,15 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "http://127.0.0.1:3456",
+    "ANTHROPIC_AUTH_TOKEN": "router-local-key",
+    "DISABLE_TELEMETRY": "1"
+  },
+  "includeCoAuthoredBy": false,
+  "model": "gemini,gemini-2.5-flash",
+  "effortLevel": "low",
+  "statusLine": {
+    "type": "command",
+    "command": "\"{{NODE_EXE}}\" \"{{HOME}}\\.claude-gemini\\statusline.js\""
+  },
+  "theme": "dark"
+}
